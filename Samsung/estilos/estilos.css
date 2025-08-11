@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #4D6FFF;
+}
+
+header a {
+  color: white;
+}
+
+header {
+  padding: 1%;
+  display: flex;                
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #1428A0;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+h2 {
+  margin-top: 1%;
+}
+
+main p {
+  margin-bottom: 1%;
+}
+
+.no-espacio {
+  margin-bottom: 0;
+}
+
+.img-lineas img {
+  width: 48%;
+  height: auto;       
+  object-fit: cover;
+}
+
+.img-lineas {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 1%;
+}
+
+.sin-items {
+  list-style: none;
+  padding-left: 0;
+}
+
+img {
+  width: 100%;
+}
+
+main ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #1428A0;
+  padding: 1%;
+  color: white;
+}
+
+.img-fade {
+  mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+}
+
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 900;
+}
+
+iframe {
+  width: 100%;
+}
+
+.contenedor-grid{
+  display: grid;
+  grid-template-areas: 
+  "caracteristicaP caracteristicaP caracteristicaP caracteristicaP"
+  "textoPB imgPBP imgPBP textoPP"
+  "imgPU textoPU textoPE imgPE"
+  "caracteristicaC caracteristicaC caracteristicaC caracteristicaC"
+  "nada imgCBP textoCBP nada1"
+  "textoCU imgCU textoCE imgCE"
+  "caracteristicaB caracteristicaB caracteristicaB caracteristicaB"
+  "textoBB textoBP textoBU textoBE"
+  ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 200px 200px 100px 200px 200px 100px 100px;
+  align-items: center;
+  justify-items: center;
+}
+
+.caracteristicaP {
+  grid-area: caracteristicaP;
+}
+
+.textoPB {
+  grid-area: textoPB;
+}
+
+.imgPBP {
+  grid-area: imgPBP;
+}
+
+.textoPP {
+  grid-area: textoPP;
+}
+
+.imgPU {
+  grid-area: imgPU;
+}
+
+.textoPU {
+  grid-area: textoPU;
+}
+
+.textoPE {
+  grid-area: textoPE;
+}
+
+.imgPE {
+  grid-area: imgPE;
+}
+
+.caracteristicaC {
+  grid-area: caracteristicaC;
+}
+
+.imgCBP {
+  grid-area: imgCBP;
+}
+
+.textoCBP {
+  grid-area: textoCBP;
+}
+
+.textoCU {
+  grid-area: textoCU;
+}
+
+.imgCU {
+  grid-area: imgCU;
+}
+
+.textoCE {
+  grid-area: textoCE;
+}
+
+.imgCE {
+  grid-area: imgCE;
+}
+
+.caracteristicaB {
+  grid-area: caracteristicaB;
+}
+
+.textoBB {
+  grid-area: textoBB;
+}
+
+.textoBP {
+  grid-area: textoBP;
+}
+
+.textoBU {
+  grid-area: textoBU;
+}
+
+.textoBE {
+  grid-area: textoBE;
+}
+
+.contenedor-grid img{
+    height: -webkit-fill-available;
+    width: auto;
+    justify-self: center;
+}
