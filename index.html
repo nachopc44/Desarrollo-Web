@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="./estilos/estilos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samsung Galaxy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilos/estilos.css">
 </head>
+
 <body>
     <header>
         <h1>Samsung Galaxy</h1>
@@ -18,8 +22,6 @@
             </ul>
         </nav>
     </header>
-
-    <hr>
 
     <main>
 
@@ -36,15 +38,32 @@
         <section>
             <h2>Líneas Galaxy S y Galaxy Z</h2>
             <p class="no-espacio">Actualmente, Samsung se destaca por sus dos líneas insignia:</p>
-            <ul>
-                <li><strong>Galaxy S:</strong> la opción ideal para quienes buscan potencia, fotografía profesional y diseño clásico.</li>
-                <li><strong>Galaxy Z:</strong> la apuesta por el futuro con pantallas plegables, multitarea real y estilo único.</li>
-            </ul>
-            <p>Ambas familias combinan hardware de primer nivel con la experiencia inteligente de One UI, el sistema exclusivo de Samsung.</p>
-            <div class="img-lineas">
-                <img src="./medios/s25-incio.png" alt="Galaxy S25 Series">
-                <img src="./medios/z-incio.jpg" alt="Galaxy Z Fold 7 y Z Flip 7">
+            <div class="container">
+                <div class="row justify-content-evenly">
+                    <div class="col-12 col-md-auto d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./medios/s25-incio.png" class="card-img-top" alt="Galaxy S25 Series">
+                            <div class="card-body">
+                                <h5 class="card-title">S25 Series</h5>
+                                <p class="card-text">La opción ideal para quienes buscan potencia, fotografía profesional y diseño clásico</p>
+                                <a href="./paginas/galaxy_s.html" class="btn btn-primary">Galaxy S</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-auto d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./medios/z-incio.jpg" class="card-img-top" alt="Galaxy Z Fold 7 y Z Flip 7">
+                            <div class="card-body">
+                                <h5 class="card-title">Z7 Series</h5>
+                                <p class="card-text">La apuesta por el futuro con pantallas plegables, multitarea real y estilo único</p>
+                                <a href="./paginas/galaxy_z.html" class="btn btn-primary">Galaxy Z</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <p>Ambas familias combinan hardware de primer nivel con la experiencia inteligente de One UI 8, el sistema exclusivo y mas reciente de Samsung.</p>
+
         </section>
 
         <section>
@@ -52,10 +71,11 @@
         </section>
     </main>
 
-    <hr>
-
     <footer>
         <p>©2025 Samsung Galaxy. Sitio creado con fines educativos.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="../estilos/estilos.css">
     <title>Galaxy S</title>
 </head>
@@ -19,8 +20,6 @@
         </nav>
     </header>
 
-    <hr>
-
     <main>
 
         <img src="../medios/s25-series.jpg" alt="Galaxy S25 Series">
@@ -32,12 +31,56 @@
         <section>
             <h2>Modelos disponibles</h2>
             <p class="no-espacio">La serie Galaxy S25 está compuesta por cuatro modelos que se adaptan a diferentes necesidades y preferencias:</p>
-            <ul>
-                <li><strong>Galaxy S25</strong>: El modelo base, con un diseño compacto y potencia equilibrada para el usuario cotidiano.</li>
-                <li><strong>Galaxy S25+</strong>: Una versión más grande con mejor batería y pantalla, ideal para quienes quieren más espacio y duración.</li>
-                <li><strong>Galaxy S25 Ultra</strong>: El tope de gama, con cámara avanzada, pantalla más grande y funciones premium como el S Pen integrado.</li>
-                <li><strong>Galaxy S25 Edge</strong>: Modelo ultradelgado con diseño elegante y pantalla curva, pensado para usuarios que priorizan la portabilidad sin perder potencia.</li>
-            </ul>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Samsung S25
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        El modelo base, con un diseño compacto y potencia equilibrada para el usuario cotidiano.
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Samsung S25+
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Una versión más grande con mejor batería y pantalla, ideal para quienes quieren más espacio y duración.
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Galaxy S25 Ultra
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        El tope de gama, con cámara avanzada, pantalla más grande y funciones premium como el S Pen integrado.
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Galaxy S25 Edge
+                    </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Modelo ultradelgado con diseño elegante y pantalla curva, pensado para usuarios que priorizan la portabilidad sin perder potencia.
+                    </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section>
@@ -51,7 +94,7 @@
             </ul>
         </section>
 
-        <section class="contenedor-grid">
+        <section class="contenedor-grid-s">
             <h3 class="caracteristicaP">Pantalla</h3>
             <div class="textoPB">
                 <h4>S25</h4>
@@ -61,23 +104,23 @@
                 <h4>S25+</h4>
                 <p>6.7" Dynamic AMOLED 2X</p>
             </div>
-            <img src="../medios/pantalla-s25s25+.jpg" alt="Frente de S25 y S25+" class="imgPBP">
+            <img src="../medios/pantalla-s25s25+.jpg" alt="Frente de S25 y S25+" class="imgPBP img-vert">
             <div class="textoPU">
                 <h4>S25 Ultra</h4>
                 <p>6.9" Dynamic AMOLED 2X</p>
             </div>
-            <img src="../medios/pantalla-s25ultra.png" alt="Frente de S25 Ultra" class="imgPU">
+            <img src="../medios/pantalla-s25ultra.png" alt="Frente de S25 Ultra" class="imgPU img-vert">
             <div class="textoPE">
                 <h4>S25 Edge</h4>
                 <p>6.7" Dynamic AMOLED 2X</p>
             </div>
-            <img src="../medios/pnatalla-s25edge.png" alt="Frente de S25 Edge" class="imgPE">
+            <img src="../medios/pnatalla-s25edge.png" alt="Frente de S25 Edge" class="imgPE img-vert">
 
             <h3 class="caracteristicaC">Camaras</h3>
             <div class="textoCBP">
                 <h4>S25 y S25+</h4>
                 <ul class="sin-items">
-                    <li>Camara selfie: 12MP</li>
+                    <li>Camara frontal: 12MP</li>
                     <li>Principal: 50MP</li>
                     <li>Gran angular: 12MP</li>
                     <li>Teleobjetivo: 10MP</li>
@@ -87,7 +130,7 @@
             <div class="textoCU">
                 <h4>S25 Ultra</h4>
                 <ul class="sin-items">
-                    <li>Camara selfie: 12MP</li>
+                    <li>Camara frontal: 12MP</li>
                     <li>Principal: 200MP</li>
                     <li>Gran angular: 50MP</li>
                     <li>Teleobjetivo x3: 10MP</li>
@@ -98,7 +141,7 @@
             <div class="textoCE">
                 <h4>S25 Edge</h4>
                 <ul class="sin-items">
-                    <li>Camara selfie: 12MP</li>
+                    <li>Camara frontal: 12MP</li>
                     <li>Principal: 200MP</li>
                     <li>Gran angular: 12MP</li>
                 </ul>
@@ -126,18 +169,40 @@
 
         <section>
             <h2>Multimedia</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/_9sBc08FYEU?si=5fvVIEY8VI_8STCi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3i1OB6wKYms?si=1_Yx34mRQU0_1U7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aaVLuXKJ8x0?si=_Llqf4WWtC_bIgcp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JS9KHPtE9zo?si=d7u0G5Wg-c_W1hjy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OVlJYlIJdJQ?si=9UqV2ijGorivfCgL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_9sBc08FYEU?si=5fvVIEY8VI_8STCi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3i1OB6wKYms?si=1_Yx34mRQU0_1U7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/aaVLuXKJ8x0?si=_Llqf4WWtC_bIgcp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JS9KHPtE9zo?si=d7u0G5Wg-c_W1hjy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OVlJYlIJdJQ?si=9UqV2ijGorivfCgL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
     </main>
-
-    <hr>
 
     <footer>
         <p>©2025 Samsung Galaxy. Sitio creado con fines educativos.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
