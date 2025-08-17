@@ -235,15 +235,13 @@ iframe {
   grid-template-areas: 
   "textPE imagP textPP"
   "textPE imagP textPP"
-  "textCF textCF imagC"
-  "textCG textCG imagC"
-  "textCP textCP imagC"
-  "textCT textCT imagC"
-  "textP textA textB"
-  "textP textA textB"
+  "textCF imagC textP"
+  "textCG imagC textA"
+  "textCP imagC textB"
+  "textCT imagC textG"
   ;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(2, 200px) repeat(4, 100px) repeat(2,50px);
+  grid-template-rows: repeat(2, 200px) repeat(4, 100px);
   align-items: center;
   text-align: center;
   justify-items: center;
@@ -291,6 +289,14 @@ iframe {
 
 .textB {
   grid-area: textB;
+}
+
+.textG {
+  grid-area: textG;
+}
+
+.textA, .textB, .textG, .textP {
+  padding: 2rem;
 }
 
 .contenedor-grid-zfold img {
