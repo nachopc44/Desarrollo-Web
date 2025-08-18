@@ -83,8 +83,12 @@ main ul {
 footer {
   text-align: center;
   background-color: #1428A0;
-  padding: 1%;
+  padding: 0.5rem;
   color: white;
+}
+
+footer p {
+  margin-bottom: 0%;
 }
 
 .img-fade {
@@ -325,6 +329,10 @@ iframe {
   .row {
     margin-left: 0%;
     margin-right: 0%;
+  }
+
+  main {
+    padding:0.5rem;
   }
 
 }
