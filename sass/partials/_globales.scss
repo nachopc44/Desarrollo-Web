@@ -1,0 +1,56 @@
+@use "variables" as*;
+
+/* Globales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: $fuente-texto;
+    color: $color-negro;
+
+    h1 {
+        @include font (2.5rem);
+        font-weight: 900;
+    }
+
+    h2 {
+        @include font (2rem);
+        margin-top: 1rem;
+    }
+
+    h3 {
+        @include font (1.7rem);
+    }
+
+    h4 {
+        @include font (1.5rem);
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            color: $celeste-hover;
+        }
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width:480px) {
+    .row {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}

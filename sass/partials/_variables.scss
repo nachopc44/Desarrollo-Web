@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+$azul-principal: #1428A0;
+$celeste-hover: #4D6FFF;
+$color-negro: black;
+$color-blanco: white;
+
+$fuente-texto: "Inter", sans-serif;
+$fuente-titulos: "Manrope", sans-serif;
+
+@mixin font($size) {
+    font-family: $fuente-titulos;
+    font-size: $size;
+}
+
+@mixin area($nombre) {
+    .#{$nombre} {
+        grid-area: $nombre;
+    }
+}
+
+@mixin img-grid($altura) {
+    max-height: $altura;
+    object-fit: contain;
+    border-radius: 10px;
+}

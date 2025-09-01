@@ -1,0 +1,242 @@
+@use "variables" as*;
+
+main {
+    margin: 1rem;
+
+    h1 {
+        color: $azul-principal;
+        text-decoration: underline;
+    }
+
+    p {
+        margin-bottom: 1%;
+
+        &.no-espacio {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        padding-left: 20px;
+
+        p {
+            margin-bottom: 0%;
+        }
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .img-fade {
+        mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+    }
+
+    .no-margin {
+        margin-top: 0%;
+    }
+
+    .row>* {
+        margin-top: calc(var(--bs-gutter-x) * .5);
+        margin-bottom: calc(var(--bs-gutter-x) * .5);
+    }
+
+    %grid-comun {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .contenedor-grid-s {
+        @extend %grid-comun;
+        grid-template-areas:
+            "caracteristicaP caracteristicaP caracteristicaP caracteristicaP"
+            "textoPB imgPBP imgPBP textoPP"
+            "imgPU textoPU textoPE imgPE"
+            "caracteristicaC caracteristicaC caracteristicaC caracteristicaC"
+            ". imgCBP textoCBP ."
+            "textoCU imgCU textoCE imgCE"
+            "caracteristicaB caracteristicaB caracteristicaB caracteristicaB"
+            "textoBB textoBP textoBU textoBE";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px repeat(2, 400px) 100px 200px 200px 100px 100px;
+
+        @include area(caracteristicaP);
+        @include area(textoPB);
+        @include area(imgPBP);
+        @include area(textoPP);
+        @include area(imgPU);
+        @include area(textoPU);
+        @include area(textoPE);
+        @include area(imgPE);
+        @include area(caracteristicaC);
+        @include area(imgCBP);
+        @include area(textoCBP);
+        @include area(textoCU);
+        @include area(imgCU);
+        @include area(textoCE);
+        @include area(imgCE);
+        @include area(caracteristicaB);
+        @include area(textoBB);
+        @include area(textoBP);
+        @include area(textoBU);
+        @include area(textoBE);
+
+        .img-vert {
+            max-height: 400px;
+        }
+
+        img {
+            @include img-grid(200px);
+        }
+    }
+
+    .contenedor-grid-zflip {
+        @extend %grid-comun;
+        grid-template-areas:
+            "texPE imaP texPP"
+            "texCF imaC imaC"
+            "texCP imaC imaC"
+            "texCG imaC imaC"
+            "texP texA texB";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 400px repeat(3, 133px) 100px;
+
+        @include area(texPE);
+        @include area(imaP);
+        @include area(texPP);
+        @include area(texCF);
+        @include area(imaC);
+        @include area(texCP);
+        @include area(texCG);
+        @include area(texP);
+        @include area(texA);
+        @include area(texB);
+
+        img {
+            @include img-grid(400px);
+        }
+    }
+
+    .contenedor-grid-zfold {
+        @extend %grid-comun;
+        grid-template-areas:
+            "textPE imagP textPP"
+            "textCF imagC textP"
+            "textCG imagC textA"
+            "textCP imagC textB"
+            "textCT imagC textG";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 400px repeat(4, 100px);
+
+        @include area(textPE);
+        @include area(imagP);
+        @include area(textPP);
+        @include area(textCF);
+        @include area(imagC);
+        @include area(textCG);
+        @include area(textCP);
+        @include area(textCT);
+        @include area(textP);
+        @include area(textA);
+        @include area(textB);
+        @include area(textG);
+
+        img {
+            @include img-grid(400px)
+        }
+
+        .textA, .textB, .textG, .textP {
+            padding: 2rem;
+        }
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(100%);
+    }
+}
+
+@media (max-width:480px) {
+    main {
+        margin: 0.8rem;
+
+        .contenedor-grid-s {
+            grid-template-areas:
+                "caracteristicaP"
+                "textoPP"
+                "textoPB"
+                "imgPBP"
+                "textoPU"
+                "imgPU"
+                "textoPE"
+                "imgPE"
+                "caracteristicaC"
+                "textoCBP"
+                "imgCBP"
+                "textoCU"
+                "imgCU"
+                "textoCE"
+                "imgCE"
+                "caracteristicaB"
+                "textoBB"
+                "textoBP"
+                "textoBU"
+                "textoBE";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 80px) auto 80px 200px 80px 200px 80px 160px repeat(2, 200px) auto 150px 200px repeat(5, 80px);
+
+            .img-vert {
+                max-height: 200px;
+            }
+
+            img {
+                @include img-grid(200px)
+            }
+        }
+
+        .contenedor-grid-zfold {
+            grid-template-areas:
+                "textPE"
+                "textPP"
+                "imagP"
+                "textCF"
+                "textCG"
+                "textCP"
+                "textCT"
+                "imagC"
+                "textP"
+                "textA"
+                "textB"
+                "textG";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 50px) 200px repeat(4, 80px) 250px repeat(2, 80px) 50px 100px;
+
+            img {
+                @include img-grid(200px)
+            }
+        }
+
+        .contenedor-grid-zflip {
+            grid-template-areas:
+                "texPE"
+                "texPP"
+                "imaP"
+                "texCF"
+                "texCP"
+                "texCG"
+                "imaC"
+                "texP"
+                "texA"
+                "texB";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 50px) 200px repeat(3, 80px) 200px repeat(2, 80px) 50px;
+
+            img {
+                @include img-grid(200px)
+            }
+        }
+    }
+}

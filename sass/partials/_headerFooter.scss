@@ -1,0 +1,42 @@
+@use "variables" as*;
+
+header {
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $azul-principal;
+    color: $color-blanco;
+
+    nav {
+        ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin-bottom: 0%;
+            padding-left: 0%;
+
+            a {
+                color: $color-blanco;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: $azul-principal;
+    padding: 0.5rem;
+    color: $color-blanco;
+
+    p {
+        margin-bottom: 0%;
+    }
+}
+
+@media (max-width:480px) {
+    header {
+        justify-content: center;
+    }
+}
