@@ -102,7 +102,7 @@ main {
             "texCG imaC imaC"
             "texP texA texB";
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 400px repeat(3, 133px) 100px;
+        grid-template-rows: 400px repeat(3, 133px) auto;
 
         @include area(texPE);
         @include area(imaP);
@@ -118,18 +118,21 @@ main {
         img {
             @include img-grid(400px);
         }
+
+        .texP, .texA, .texB {
+            padding: 2rem;
+        }
     }
 
     .contenedor-grid-zfold {
         @extend %grid-comun;
         grid-template-areas:
             "textPE imagP textPP"
-            "textCF imagC textP"
-            "textCG imagC textA"
-            "textCP imagC textB"
-            "textCT imagC textG";
+            "textCF textCP textCG"
+            "imagC imagC textCT"
+            "textP textA textB";
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 400px repeat(4, 100px);
+        grid-template-rows: 400px 100px 400px auto;
 
         @include area(textPE);
         @include area(imagP);
@@ -142,13 +145,12 @@ main {
         @include area(textP);
         @include area(textA);
         @include area(textB);
-        @include area(textG);
 
         img {
             @include img-grid(400px)
         }
 
-        .textA, .textB, .textG, .textP {
+        .textA, .textB, .textP {
             padding: 2rem;
         }
     }
@@ -156,6 +158,79 @@ main {
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         filter: invert(100%);
+    }
+}
+
+@media (min-width:481px) and (max-width:800px) {
+    main {
+        margin: 0.9rem;
+
+        .contenedor-grid-s {
+            grid-template-areas: 
+            "caracteristicaP caracteristicaP"
+            "imgPBP imgPBP"
+            "textoPB textoPP"
+            "imgPU textoPU"
+            "textoPE imgPE"
+            "caracteristicaC caracteristicaC"
+            "imgCBP textoCBP"
+            "textoCU imgCU"
+            "imgCE textoCE"
+            "caracteristicaB caracteristicaB"
+            "textoBB textoBP"
+            "textoBU textoBE";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px auto 100px repeat(2, 300px) 100px repeat(3, 275px) repeat(3, 100px);
+
+            .img-vert {
+                max-height: 300px;
+            }
+
+            img {
+                @include img-grid(250px)
+            }
+        }
+
+        .contenedor-grid-zfold {
+            grid-template-areas: 
+            "textPE imagP"
+            "textPP imagP"
+            "textCP textCF"
+            "imagC imagC"
+            "textCG textCT"
+            "textP textP"
+            "textA textB";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 150px) 100px 200px 100px auto auto;
+
+            .img-hori{
+                max-height: 200px;
+            }
+
+            img {
+                @include img-grid(295px) 
+            }
+        }
+
+        .contenedor-grid-zflip {
+            grid-template-areas: 
+            "texPE imaP"
+            "texPP imaP"
+            "texCG texCP"
+            "imaC texCF"
+            "texP texP"
+            "texA texB";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 150px) 100px 200px auto auto;
+
+            .img-hori{
+                max-height: 200px;
+            }
+
+            img {
+                @include img-grid(295px)
+            }
+        }
     }
 }
 

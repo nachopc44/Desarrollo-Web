@@ -35,6 +35,12 @@ footer {
     }
 }
 
+@media (min-width:481px) and (max-width:632px) {
+    header {
+        justify-content: center;
+    }
+}
+
 @media (max-width:480px) {
     header {
         justify-content: center;

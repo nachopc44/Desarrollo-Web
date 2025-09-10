@@ -22,5 +22,5 @@ $fuente-titulos: "Manrope", sans-serif;
 @mixin img-grid($altura) {
     max-height: $altura;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 10px;;
 }
